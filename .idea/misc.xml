@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/MvvmPokedex/app/src/main/res/layout/item_card.xml" value="0.1" />
         <entry key="..\:/Users/CHV/AndroidStudioProjects/MvvmPokedex/app/src/main/res/font/open_sans.xml" value="0.21328125" />
         <entry key="..\:/Users/CHV/AndroidStudioProjects/MvvmPokedex/app/src/main/res/layout/activity_detail.xml" value="0.2" />
         <entry key="..\:/Users/CHV/AndroidStudioProjects/MvvmPokedex/app/src/main/res/layout/activity_main.xml" value="0.2" />

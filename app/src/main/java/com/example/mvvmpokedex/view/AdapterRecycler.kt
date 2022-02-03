@@ -1,14 +1,13 @@
 package com.example.mvvmpokedex.view
 
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mvvmpokedex.databinding.ItemCardBinding
-import com.example.mvvmpokedex.model.PokemonModel
+import com.example.mvvmpokedex.model.PokemonResult
 
-class AdapterRecycler(private var pokemonList: List<PokemonModel>) :
+class AdapterRecycler(private var pokemonList: List<PokemonResult>) :
     RecyclerView.Adapter<AdapterRecycler.ViewHolder>() {
 
     inner class ViewHolder(val binding:ItemCardBinding) : RecyclerView.ViewHolder(binding.root)
@@ -23,7 +22,7 @@ class AdapterRecycler(private var pokemonList: List<PokemonModel>) :
         //fill recyclerview
         with(holder){
             with (pokemonList[position]){
-                binding.name.text = name
+                binding.name.text = "#${position+1} $name"
             }
         }
 
