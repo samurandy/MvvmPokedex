@@ -11,6 +11,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans"
         android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,7 +21,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans"
         android:contentDescription="@string/pokemon_image_content_description"
         app:layout_constraintEnd_toEndOf="parent"

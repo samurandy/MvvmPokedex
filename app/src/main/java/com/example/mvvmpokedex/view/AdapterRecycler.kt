@@ -23,6 +23,7 @@ class AdapterRecycler(private var pokemonList: List<PokemonResult>) :
         with(holder){
             with (pokemonList[position]){
                 binding.name.text = "#${position+1} $name"
+
             }
         }
 

@@ -1,10 +1,9 @@
 package com.example.mvvmpokedex.view
 
 import android.content.Context
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.NetworkInfo
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -14,14 +13,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmpokedex.databinding.ActivityMainBinding
 import com.example.mvvmpokedex.model.PokemonProvider
 import com.example.mvvmpokedex.model.PokemonResult
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.withContext
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var pokemonList: List<PokemonResult>
+    private var provider = PokemonProvider()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             if (isNetworkAvailable(applicationContext)) {
 
-                pokemonList = PokemonProvider().getPokemon()
+                pokemonList = provider.getAllPokemon()
                 binding.recyclerPokemon.adapter = AdapterRecycler(pokemonList)
 
             } else {
