@@ -3,78 +3,99 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/color_bg">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/layout_bg" />
+
+    <ImageView
+        android:id="@+id/image_pokemon_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/pokemon_image_content_description"
+        android:maxWidth="200dp"
+        android:minHeight="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/name_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/open_sans"
+        android:fontFamily="@font/roboto_slab_bold"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textAllCaps="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_pokemon_detail"
         tools:text="Pikachu" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/open_sans"
-        android:contentDescription="@string/pokemon_image_content_description"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_detail"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/imageView_height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:fontFamily="@font/open_sans"
+        android:adjustViewBounds="true"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:layout_marginStart="70dp"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/height_pokemon_icon"
         android:textSize="24sp"
-        android:paddingStart="16dp"
-        android:text="Height: "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/name_detail" />
 
     <TextView
         android:id="@+id/height_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:fontFamily="@font/open_sans"
-        tools:text="0,4m"
+        android:fontFamily="@font/roboto"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView_height"
+        app:layout_constraintStart_toStartOf="@+id/imageView_height"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_height"
+        tools:text="0,4" />
+
+    <ImageView
+        android:id="@+id/imageView_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="90dp"
+        android:maxHeight="100dp"
+        android:layout_marginEnd="70dp"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/weight_pokemon_icon"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_detail" />
 
     <TextView
         android:id="@+id/weight_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/open_sans"
-        tools:text="6kg"
+        android:fontFamily="@font/roboto"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/height_detail" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView_weight"
+        app:layout_constraintStart_toStartOf="@+id/imageView_weight"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_weight"
+        tools:text="6" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:fontFamily="@font/open_sans"
-        android:textSize="24sp"
-        android:paddingStart="16dp"
-        android:text="Weight: "
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

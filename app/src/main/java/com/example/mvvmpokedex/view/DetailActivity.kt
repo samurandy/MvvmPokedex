@@ -1,5 +1,6 @@
 package com.example.mvvmpokedex.view
 
+import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
@@ -11,6 +12,8 @@ import kotlinx.coroutines.launch
 class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
     private var provider = PokemonProvider()
+    lateinit var pokemonSprite: Bitmap
+
 
 
     companion object {
@@ -25,6 +28,7 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         fillPokemonDetail()
 
     }
@@ -36,12 +40,17 @@ class DetailActivity : AppCompatActivity() {
             with(provider.getPokemon(position + 1)) {
                 with(binding) {
                     nameDetail.text = name
-                    heightDetail.text = height.toString()
-                    weightDetail.text = weight.toString()
+                    heightDetail.text = "${(height/10)}m"
+                    weightDetail.text = "${(weight/10)}kg"
                     Glide.with(this@DetailActivity).load("$IMAGE_BASE_URL${position + 1}.png")
-                        .into(imageView)
+                        .into(imagePokemonDetail)
                 }
             }
         }
     }
+
+    /*private fun getProminentColor(): Color{
+        Palette.Builder(Bitmap.createBitmap(DrawableRes ))
+        Bitmap.
+    }*/
 }

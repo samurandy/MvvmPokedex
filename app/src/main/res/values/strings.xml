@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MvvmPokedex</string>
     <string name="pokemon_image_content_description">pokemon_image</string>
+    <string name="logo_pokemon">logo_pokemon</string>
 </resources>
