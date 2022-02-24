@@ -1,7 +1,6 @@
 package com.example.mvvmpokedex.view
 
 import android.content.Context
-import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +9,6 @@ import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.coroutines.launch
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmpokedex.databinding.ActivityMainBinding
 import com.example.mvvmpokedex.model.PokemonProvider
 import com.example.mvvmpokedex.model.PokemonResult
